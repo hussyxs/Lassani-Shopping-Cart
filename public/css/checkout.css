@@ -1,0 +1,71 @@
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.StripeElement {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.StripeElement::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.StripeElement:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: none;
+}
+
+.StripeElement::-webkit-input-placeholder {
+  color: #868e96;
+  opacity: 1;
+}
+
+.StripeElement:-ms-input-placeholder {
+  color: #868e96;
+  opacity: 1;
+}
+
+.StripeElement::placeholder {
+  color: #868e96;
+  opacity: 1;
+}
+
+.StripeElement:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+select..StripeElement:not([size]):not([multiple]) {
+  height: calc(2.25rem + 2px);
+}
+
+select.StripeElement:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}

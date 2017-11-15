@@ -1,0 +1,120 @@
+$red: #F3121D;
+$red2: #EF7674;
+$red3: #EC5766;
+$blue: #645DD7;
+$black: #030505;
+$orng: #E16036;
+$lorng: #EB997F;
+$dblue: #0A2463;
+$dots: #C8C8C8;
+$body_font: Lato, sans-serif;
+$heading_font: Dosis, sans-serif;
+$link_size: 32px;
+
+a{
+    color: $blue;
+    &:hover{
+        color: $black;
+        text-decoration: none !important;
+    }
+}
+
+/*Navbar*/
+#header{
+    padding-bottom: 40px;
+    width: 100%;
+    
+    .logo{
+        padding: 5px 0 0 5px;
+        display: inline-block;
+        
+        img{
+            max-width: 100%;
+            height: auto;
+            -webkit-transition: -webkit-transform .4s ease-in-out;
+                    transition: transform .4s ease-in-out;
+            &:hover{
+                -webkit-filter: brightness(120%);
+                -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+            }
+        }
+    }
+    .menu{
+        padding: 5px 5px 0 0;
+        float: right;
+        
+        li{
+            display: inline-block;
+            padding: 5px 20px 0 0;
+
+            a{
+                font-family: $heading_font;
+                font-size: $link_size;
+                font-weight: 300;
+                cursor: pointer;
+                text-transform: uppercase;
+                text-decoration: none;
+                
+                .badge{
+                    color: $blue;
+                    padding-left: 0px;
+                }
+            }
+        }
+        .icon{
+            display: none;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            min-width: inherit;
+
+            a{
+                text-decoration: none;
+                display: block;
+                line-height: 0.5;
+            }
+        }
+
+        .drpdwn{
+            &:hover .dropdown-content{
+                display: inline !important;
+            }
+        }
+    }
+    @media screen and (max-width: 842px) {
+        .menu li {
+            display: none;
+        }
+        .menu li.icon {
+            display: block;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+        .menu.responsive {
+            position: relative;
+            li {
+                display: block;
+            }
+            .drpdwn{
+                &:hover .dropdown-content{
+                    display: inline-block !important;
+                }
+            }
+        }
+        .menu.responsive li.icon {
+            position: fixed;
+            right: 5px;
+            top: 5px;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        
+         
+    }
+}
+

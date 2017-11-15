@@ -1,0 +1,100 @@
+$red: #F3121D;
+$red2: #EF7674;
+$red3: #EC5766;
+$blue: #645DD7;
+$black: #030505;
+$orng: #E16036;
+$lorng: #EB997F;
+$dblue: #0A2463;
+$dots: #C8C8C8;
+$body_font: Lato, sans-serif;
+$heading_font: Dosis, sans-serif;
+$link_size: 32px;
+$break_float: 320px;
+
+a{
+    color: $blue;
+    &:hover{
+        color: $black;
+        text-decoration: none !important;
+    }
+}
+/*Shop*/
+#shop{
+    .categories{
+        .cat_list{
+            padding: 0;
+            position: -webkit-fixed;
+            position: fixed;
+            list-style: none;
+
+            li.active a{
+                border-bottom: 2px solid $black;
+                color: $black;
+                display: inline-block;
+            }
+
+            a{
+                display: inline-block;
+                -webkit-transition: .5s all ease-out;
+                -moz-transition: .5s all ease-out;
+                transition: .5s all ease-out;
+                border-bottom: 2px solid transparent;
+                line-height: 1.5;
+            }
+        }
+        @media screen and (max-width: 842px) {
+            .cat_list{
+                position: -webkit-static;
+                position: static;
+            }
+        }
+    }
+    
+    .products{
+        .prod_list{
+             padding: 0 10px;
+            
+            h4{
+                color: $lorng;
+                letter-spacing: 1.75px;
+            }
+            
+            .product{
+                display: block;
+                border-left: 2px solid $red3;
+                margin-bottom: 10px;
+                background-color: #F4F4F4;
+                padding: 0 5px 10px 5px;
+                overflow: hidden;
+                
+                h6{
+                    width: 75%;
+                    display: inline-block;
+                }
+                
+                p{
+                    color: dimgray;
+                    font-size: 13px;
+                    width: 85%;
+                    display: inline-block;
+                }
+                
+                .price{
+                    float: right;
+                    display: inline-block;
+                }
+                
+                .types{
+                    display: block;
+                    
+                    li{
+                        border-bottom: 2px dotted $dots;
+                    }
+                }
+            }
+        }
+    }
+}
+    
+    
